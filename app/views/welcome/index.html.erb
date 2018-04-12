@@ -1,2 +1,26 @@
-<h1>This is the blog of Iris</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<div class="wrapper">
+      <header>
+        <h1 class="view"><%= link_to "Iris Gou | 无线充电", welcome_index_path %></h1>
+        <h2>Welcome to my blog</h2>
+        <br>
+        <p class="view"><%= link_to 'About me', controller: 'self' %></p>
+        <p class="view"><%= link_to 'All Articles', controller: 'articles' %></p>
+        <p class="view"><%= link_to 'Category', controller: 'category' %></p>
+        <p class="view"><%= link_to 'Projects', controller: 'resume' %></p>
+        <p class="view"><%= link_to 'Photos', controller: 'photos' %></p>
+	  </header>
+	  <section>
+	  	<h2>Something to say...</h2>
+	  	<%= link_to image_tag("monument.jpg", :class => "pic"), image_path("monument.jpg") %>
+	  	<br>
+	  	<p>这是春天樱花正开得茂盛的华盛顿 Washington D.C.。</p>
+	  	<br>
+	  	<p>转眼间两年过去，我的学生生涯就要正式告一个段落，我也很快就要告别 DC，告别美国。最近我总在想两年前辞掉互联网市场运营工作决定出国学习计算机科学的我，与现在即将回国的我究竟有了哪些改变呢。专业知识提升了，见的世面更多了，也变得更加独立和成熟，最重要的是我知道自己想要的是什么，虽然还有很长一段路要走，还有很多能力需要提升，还需要不断地历练跟成长，但是有了目标，也有了耐心和恒心，也有了一次次从失败中挺过来逐渐拾起的信心。</p>
+	  	<br>
+	  	<p>近期的目标是，完成学业，继续钻研技术，找到一份还算理想的研发的工作，多看些书，多思考，改掉不良的心理习惯，坚持写随笔，继续不断喝好咖啡和练习自己手冲。</p>
+	  	<br>
+	  	<p>感恩这两年在国外生活的时光，感恩走过的每段路，认识的每个人，学到的每样东西，让我变得越来越好。</p>
+	  </section>
+	  <footer>
+	  </footer>
+</div>

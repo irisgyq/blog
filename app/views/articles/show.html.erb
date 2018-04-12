@@ -1,18 +1,35 @@
-<p>
-	<strong>Title:</strong>
-	<%= @article.title %>
-</p>
+<div class="wrapper">
+      <header>
+        <h1 class="view"><%= link_to "Iris Gou | 无线充电", welcome_index_path %></h1>
+        <h2>Welcome to my blog</h2>
+        <br>
+        <p class="view"><%= link_to 'About me', controller: 'self' %></p>
+        <p class="view"><%= link_to 'All Articles', controller: 'articles' %></p>
+        <p class="view"><%= link_to 'Category', controller: 'category' %></p>
+        <p class="view"><%= link_to 'Projects', controller: 'resume' %></p>
+        <p class="view"><%= link_to 'Photos', controller: 'photos' %></p>
+	  </header>
+	  <section>
+	  	<p>
+			<strong>Title:</strong>
+			<%= @article.title %>
+		</p>
 
-<p>
-	<strong>Text:</strong>
-	<%= @article.text %>
-</p>
+		<p>
+			<strong>Text:</strong>
+			<%= @article.text %>
+		</p>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+		<h2>Comments</h2>
+		<%= render @article.comments %>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+		<h2>Add a comment:</h2>
+		<%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> 
-<%= link_to 'Back', articles_path %>
+		<%= link_to 'Edit', edit_article_path(@article) %> 
+		<%= link_to 'Back', articles_path %>
+	  </section>
+	  <footer>
+	  </footer>
+</div>
+
