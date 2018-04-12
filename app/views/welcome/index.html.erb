@@ -1,8 +1,11 @@
 <div class="wrapper">
       <header>
-        <h1 class="view"><%= link_to "Iris Gou | 无线充电", welcome_index_path %></h1>
-        <h2>Welcome to my blog</h2>
-        <br>
+        <h1 class="view"><%= link_to "Iris Gou | 无限充电", welcome_index_path %></h1>
+        <%= link_to image_tag("rainbow.jpg", :class => "pic"), image_path("rainbow.jpg") %>
+        <h3>I'm Iris.</h3>
+        <h3>A back-end programmer using Java, Ruby on Rails.</h3>
+        <h3>A coffee lover and maker.</h3>
+        <h3>A traveller and also a dreamer.</h3>
         <p class="view"><%= link_to 'About me', controller: 'self' %></p>
         <p class="view"><%= link_to 'All Articles', controller: 'articles' %></p>
         <p class="view"><%= link_to 'Category', controller: 'category' %></p>
