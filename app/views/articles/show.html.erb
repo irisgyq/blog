@@ -28,7 +28,7 @@
 
 		<p>
 			<strong>Text:</strong><br>
-			<%= @article.text %>
+			<%= simple_format(@article.text) %>
 		</p>
 
 		<table>
@@ -45,7 +45,6 @@
 		<h2>Add a comment:</h2>
 		<%= render 'comments/form' %>
 
-		
 	  </section>
 	  <footer>
 	  </footer>
