@@ -20,7 +20,11 @@
 
 	<p>
 		<%= form.label :text %><br>
-		<%= form.text_area :text %>
+		<div class="form form-stacked">
+    		<div class="form-block">
+				<%= form.text_area(:text, class: "textarea-tall", id: "board_content") %>
+			</div>
+  		</div>
 	</p>
 
 	<p>
