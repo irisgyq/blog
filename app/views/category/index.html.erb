@@ -18,7 +18,18 @@
             <th></th>
         </tr>
 
+        <% @articles = Article.all %>
         <% @categories.each do |category| %>
+            <% @articles.each do |article| %>
+                <% if article.category == category.name %>
+                    <% if category.number == nil %>
+                        <% category.number = 1 %>
+                    <% else %>
+                        <% category.number = category.number + 1 %>
+                    <% end %>
+                <% end %>
+            <% end %>
+
         <tr>
             <td><%= category.name %></td>
             <td><%= category.number %></td>
