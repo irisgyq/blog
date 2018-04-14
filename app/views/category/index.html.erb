@@ -11,31 +11,26 @@
         <p class="view"><%= link_to 'Photos', controller: 'photos' %></p>
 	  </header>
 	  <section>
+        <h2>Category of articles...</h2>
 	  	<table>
         <tr>
             <th>Category Name</th>
             <th>Number</th>
-            <th></th>
         </tr>
 
         <% @articles = Article.all %>
         <% @categories.each do |category| %>
+            <% category.number = 0 %>
             <% @articles.each do |article| %>
                 <% if article.category == category.name %>
-                    <% if category.number == nil %>
-                        <% category.number = 1 %>
-                    <% else %>
-                        <% category.number = category.number + 1 %>
-                    <% end %>
+                    <% category.number = category.number + 1 %>
                 <% end %>
             <% end %>
 
         <tr>
-            <td><%= category.name %></td>
+            <td><%= link_to category.name, category_path(category) %></td>
             <td><%= category.number %></td>
-            <td><%= link_to 'Show', category_path(category) %></td>
-            <td><%= link_to 'Edit', edit_category_path(category) %></td>
-            <td><%= link_to 'Destroy', category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            
         </tr>
         <% end %>
       </table>

@@ -12,12 +12,33 @@
 	  </header>
 	  <section>
 	  	<p>
-			<strong>Category Name:</strong>
+			<strong>Category Name:</strong><br>
 			<%= @category.name %>
 		</p>
 
-		<%= link_to 'Edit', edit_category_path(@category) %> 
-		<%= link_to 'Back', category_index_path %>
+		<p>
+			<strong>Articles:</strong><br>
+		</p>
+
+		<ul>
+			<% @articles = Article.all %>
+				<% @articles.each do |article| %>
+					<% if article.category == @category.name %>
+						<li><%= link_to article.title, article_path(article) %></li>
+					<% end %>
+				<% end %>
+		</ul>
+
+		
+
+		<table>
+			<tr>
+			<td><%= link_to 'Edit', edit_category_path(@category) %></td>
+
+            <td><%= link_to 'Destroy', category_path(@category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to 'Back', category_index_path %></td>
+		</tr>
+	</table>
 	  </section>
 	  <footer>
 	  </footer>

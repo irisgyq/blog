@@ -11,13 +11,14 @@
         <p class="view"><%= link_to 'Photos', controller: 'photos' %></p>
 	  </header>
 	  <section>
+	  	<h2>All articles...</h2>
 	  <table>
 		<tr>
 			<th>Title</th>
 			<th>Time</th>
 			<th>Category</th>
 			<th>Summary</th>
-			<th></th>
+			
 		</tr>
 
 		<% @articles.each do |article| %>
