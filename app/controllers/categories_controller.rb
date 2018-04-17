@@ -1,4 +1,4 @@
-class CategoryController < ApplicationController
+class CategoriesController < ApplicationController
 	http_basic_authenticate_with name: "iris", password: "secret", except: [:index, :show]
 
 	def index

@@ -6,7 +6,7 @@
         <br>
         <p class="view"><%= link_to 'About me', controller: 'self' %></p>
         <p class="view"><%= link_to 'All Articles', controller: 'articles' %></p>
-        <p class="view"><%= link_to 'Category', controller: 'category' %></p>
+        <p class="view"><%= link_to 'Category', controller: 'categories' %></p>
         <p class="view"><%= link_to 'Projects', controller: 'resume' %></p>
         <p class="view"><%= link_to 'Photos', controller: 'photos' %></p>
 	  </header>
@@ -36,7 +36,7 @@
 			<td><%= link_to 'Edit', edit_category_path(@category) %></td>
 
             <td><%= link_to 'Destroy', category_path(@category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			<td><%= link_to 'Back', category_index_path %></td>
+			<td><%= link_to 'Back', categories_path %></td>
 		</tr>
 	</table>
 	  </section>
